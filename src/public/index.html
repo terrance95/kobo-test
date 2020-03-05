@@ -13,19 +13,28 @@
 <body>
     <div class="container">
         <div>
-            <img src="./assets/logo.png" alt="">
+            <img src="./assets/logo.jpg" alt="">
             <form action="/process" method="GET">
-                <label for="productid" type="hidden" />
+                <label for="productid" id="productid-label"></label>
 
                 <input type="text" pattern="[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]"
                     id="product-id-input" name="productid" placeholder="Product ID: XXXX-YYYY-ZZZZ" required>
+
                 <button type="submit" class="app-button">Submit Product ID </button>
 
 
             </form>
             <p class="intro-text">This uses HTML and server-side validation to confirm product ID.</p>
+            <div class="footer">
+                <p>
+                    Did you can dynamically check the Product ID using the URL params? Ex: <a
+                        href="http://localhost:3000/process?productid=1234-1234-1234">
+                        http://localhost:3000/process?productid=1234-1234-1234</a>
+                </p>
+            </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
