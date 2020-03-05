@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>Kobo</title>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <img src="./assets/logo.png" alt="">
+            <form action="/process" method="GET">
+                <label for="productid" type="hidden" />
+
+                <input type="text" pattern="[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]"
+                    id="product-id-input" name="productid" placeholder="Product ID: XXXX-YYYY-ZZZZ" required>
+                <button type="submit" class="app-button">Submit Product ID </button>
+
+
+            </form>
+            <p class="intro-text">This uses HTML and server-side validation to confirm product ID.</p>
+        </div>
+    </div>
+</body>
+
+</html>
