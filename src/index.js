@@ -35,11 +35,11 @@ app.get('/', function(req, res) {
 app.get('/process', (req, res) => {
   if (validateInput(req.query.productid)) {
     res.set('Content-Type', 'text/html');
-    res.send(new Buffer(createHTML(successMessage)));
+    res.send(Buffer.from(createHTML(successMessage)));
     res.end();
   } else {
     res.set('Content-Type', 'text/html');
-    res.send(new Buffer(createHTML(errorMessage)));
+    res.send(Buffer.from(createHTML(errorMessage)));
     res.end();
   }
 });
